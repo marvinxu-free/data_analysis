@@ -1,0 +1,15 @@
+{
+    "colsample_bytree": 0.9, 
+    "gamma": 0.0, 
+    "learning_rate": 0.5, 
+    "max_depth": 3, 
+    "min_child_weight": 1, 
+    "missing": -9.9999, 
+    "n_estimators": 140, 
+    "nthread": 4, 
+    "objective": "binary:logistic", 
+    "reg_alpha": 0, 
+    "scale_pos_weight": 0.09993446920052425, 
+    "seed": 42, 
+    "subsample": 0.9
+}

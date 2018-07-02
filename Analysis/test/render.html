@@ -1,0 +1,175 @@
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>ECharts</title>
+    <script src="http://oog4yfyu0.bkt.clouddn.com/echarts.min.js"></script>
+    <script type="text/javascript " src="http://echarts.baidu.com/gallery/vendors/echarts/map/js/china.js"></script>
+    <script type="text/javascript " src="http://echarts.baidu.com/gallery/vendors/echarts/map/js/world.js"></script>
+    <script type="text/javascript " src="http://oog4yfyu0.bkt.clouddn.com/wordcloud.js"></script>
+    <script type="text/javascript " src="http://oog4yfyu0.bkt.clouddn.com/anhui.js "></script>
+    <script type="text/javascript " src="http://oog4yfyu0.bkt.clouddn.com/aomen.js "></script>
+    <script type="text/javascript " src="http://oog4yfyu0.bkt.clouddn.com/beijing.js "></script>
+    <script type="text/javascript " src="http://oog4yfyu0.bkt.clouddn.com/chongqing.js "></script>
+    <script type="text/javascript " src="http://oog4yfyu0.bkt.clouddn.com/fujian.js "></script>
+    <script type="text/javascript " src="http://oog4yfyu0.bkt.clouddn.com/gansu.js "></script>
+    <script type="text/javascript " src="http://oog4yfyu0.bkt.clouddn.com/guangdong.js "></script>
+    <script type="text/javascript " src="http://oog4yfyu0.bkt.clouddn.com/guangxi.js "></script>
+    <script type="text/javascript " src="http://oog4yfyu0.bkt.clouddn.com/guizhou.js "></script>
+    <script type="text/javascript " src="http://oog4yfyu0.bkt.clouddn.com/hainan.js "></script>
+    <script type="text/javascript " src="http://oog4yfyu0.bkt.clouddn.com/hebei.js "></script>
+    <script type="text/javascript " src="http://oog4yfyu0.bkt.clouddn.com/heilongjiang.js "></script>
+    <script type="text/javascript " src="http://oog4yfyu0.bkt.clouddn.com/henan.js "></script>
+    <script type="text/javascript " src="http://oog4yfyu0.bkt.clouddn.com/hubei.js "></script>
+    <script type="text/javascript " src="http://oog4yfyu0.bkt.clouddn.com/hunan.js "></script>
+    <script type="text/javascript " src="http://oog4yfyu0.bkt.clouddn.com/jiangsu.js "></script>
+    <script type="text/javascript " src="http://oog4yfyu0.bkt.clouddn.com/jiangxi.js "></script>
+    <script type="text/javascript " src="http://oog4yfyu0.bkt.clouddn.com/jilin.js "></script>
+    <script type="text/javascript " src="http://oog4yfyu0.bkt.clouddn.com/liaoning.js "></script>
+    <script type="text/javascript " src="http://oog4yfyu0.bkt.clouddn.com/neimenggu.js "></script>
+    <script type="text/javascript " src="http://oog4yfyu0.bkt.clouddn.com/ningxia.js "></script>
+    <script type="text/javascript " src="http://oog4yfyu0.bkt.clouddn.com/qinghai.js "></script>
+    <script type="text/javascript " src="http://oog4yfyu0.bkt.clouddn.com/shangdong.js "></script>
+    <script type="text/javascript " src="http://oog4yfyu0.bkt.clouddn.com/shanghai.js "></script>
+    <script type="text/javascript " src="http://oog4yfyu0.bkt.clouddn.com/shanxi.js "></script>
+    <script type="text/javascript " src="http://oog4yfyu0.bkt.clouddn.com/sichuan.js "></script>
+    <script type="text/javascript " src="http://oog4yfyu0.bkt.clouddn.com/taiwan.js "></script>
+    <script type="text/javascript " src="http://oog4yfyu0.bkt.clouddn.com/tianjin.js "></script>
+    <script type="text/javascript " src="http://oog4yfyu0.bkt.clouddn.com/xianggang.js "></script>
+    <script type="text/javascript " src="http://oog4yfyu0.bkt.clouddn.com/xinjiang.js "></script>
+    <script type="text/javascript " src="http://oog4yfyu0.bkt.clouddn.com/xizang.js "></script>
+    <script type="text/javascript " src="http://oog4yfyu0.bkt.clouddn.com/yunnan.js "></script>
+    <script type="text/javascript " src="http://oog4yfyu0.bkt.clouddn.com/zhejiang.js "></script>
+    <script type="text/javascript " src="http://oog4yfyu0.bkt.clouddn.com/guangdong.js "></script>
+    <script type="text/javascript " src="http://api.map.baidu.com/api?v=2.0&ak=ZUONbpqGBsYGXNIYHicvbAbM "></script>
+    <script type="text/javascript " src="http://echarts.baidu.com/gallery/vendors/echarts/extension/bmap.min.js "></script>
+</head>
+
+<body>
+    <div id="main" style="width: 800px;height:400px;"></div>
+    <script type="text/javascript">
+        var myChart = echarts.init(document.getElementById('main'));
+        var option = {
+    "yAxis": {
+        "type": "value",
+        "nameTextStyle": {
+            "fontSize": 14
+        },
+        "nameLocation": "middle",
+        "axisLabel": {
+            "formatter": "{value} "
+        },
+        "name": "",
+        "nameGap": 25
+    },
+    "tooltip": {},
+    "legend": {
+        "selectedMode": true,
+        "orient": "horizontal",
+        "show": true,
+        "data": [
+            "服装"
+        ],
+        "top": "top",
+        "left": "center"
+    },
+    "toolbox": {
+        "top": "center",
+        "orient": "vertical",
+        "left": "right",
+        "show": true,
+        "feature": {
+            "saveAsImage": {
+                "show": true
+            }
+        }
+    },
+    "xAxis": {
+        "type": "category",
+        "data": [
+            "衬衫",
+            "羊毛衫",
+            "雪纺衫",
+            "裤子",
+            "高跟鞋",
+            "袜子"
+        ],
+        "nameTextStyle": {
+            "fontSize": 14
+        },
+        "nameLocation": "middle",
+        "axisLabel": {
+            "interval": "auto"
+        },
+        "name": "",
+        "nameGap": 25
+    },
+    "backgroundColor": "#fff",
+    "color": [
+        "#c23531",
+        "#2f4554",
+        "#61a0a8",
+        "#d48265",
+        "#749f83",
+        "#ca8622",
+        "#bda29a",
+        "#6e7074",
+        "#546570",
+        "#c4ccd3"
+    ],
+    "series": [
+        {
+            "type": "bar",
+            "stack": "",
+            "data": [
+                5,
+                20,
+                36,
+                10,
+                75,
+                90
+            ],
+            "label": {
+                "normal": {
+                    "textStyle": {
+                        "fontSize": 12,
+                        "color": "#000"
+                    },
+                    "formatter": null,
+                    "show": false,
+                    "position": "top"
+                },
+                "emphasis": {
+                    "show": true
+                }
+            },
+            "name": "服装",
+            "markPoint": {
+                "data": []
+            },
+            "markLine": {
+                "data": []
+            }
+        }
+    ],
+    "title": {
+        "textStyle": {
+            "fontSize": 18,
+            "color": "#000"
+        },
+        "left": "auto",
+        "subtext": "这里是副标题",
+        "text": "我的第一个图表",
+        "subtextStyle": {
+            "fontSize": 12,
+            "color": "#aaa"
+        }
+    }
+};
+        myChart.setOption(option);
+    </script>
+</body>
+
+</html>
